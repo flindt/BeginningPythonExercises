@@ -5,5 +5,6 @@ Created on Nov 15, 2011
 '''
 
 
-print( "rock a by baby, \nblabla..\n")
+print( "rock a by baby, \nton the tree top\n")
+
 
