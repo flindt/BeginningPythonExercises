@@ -12,7 +12,7 @@ class Test(unittest.TestCase):
 
     def testEx51_correct_input(self):
         self.assertEqual(1, ex_5.do_plus(0,1), "do_plus returned wrong result")
-        pass
+
 
 
 if __name__ == "__main__":
