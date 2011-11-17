@@ -12,4 +12,5 @@ def printTrueFalse( X ):
     else:
         print("%i is false"%X)
         
-printTrueFalse(0)
+for i in range(10):
+    printTrueFalse(i)
