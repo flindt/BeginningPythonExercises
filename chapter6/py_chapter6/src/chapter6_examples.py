@@ -32,5 +32,15 @@ o1.get_ingredients(f1)
 # this wont work since the fridge is empty
 # o1.mix()      
 
-      
+# make a new fridge with food in
+f2 = Fridge( {"cheese":5, "milk":4, "eggs":12})
+print( f2 )
+
+# now we can make an omelet
+o1.get_ingredients(f2)
+o1.mix()
+o1.make()
+print( o1 )
+print( o1.cooked )
+
 
