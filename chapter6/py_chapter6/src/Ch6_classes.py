@@ -46,7 +46,7 @@ class Fridge:
         Raises a TypeError if food_name is not a string.
         """
         if type(food_name) != type(""):
-            raise TypeError, "add_one requires a string, given a %s" % type(food_name)
+            raise TypeError( "add_one requires a string, given a %s" % type(food_name) )
         else:
             self.__add_multi(food_name, 1)
         
@@ -69,7 +69,7 @@ class Fridge:
         return
 
 
-   def has(self, food_name, quantity=1):
+    def has(self, food_name, quantity=1):
         """
         has(food_name, [quantity]) - checks if the string food_name is in the fridge.  Quantity defaults to 1
         Returns True if there is enough, False otherwise.
@@ -93,7 +93,7 @@ class Fridge:
         except KeyError:
             return False
 
-def __get_multi(self, food_name, quantity):
+    def __get_multi(self, food_name, quantity):
         """
         _get_multi(food_name, quantity) - removes more than one of a 
         food item. Returns the number of items removed
@@ -173,7 +173,8 @@ class Omelet:
         """
         self.set_kind(kind)
         return
-def __ingredients__(self):
+    
+    def __ingredients__(self):
         """Internal method to be called on by a fridge or other objects
         that need to act on ingredients.
         """
