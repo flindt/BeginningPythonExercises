@@ -6,5 +6,5 @@ Created on Nov 15, 2011
 
 
 print( 5*10 )
-x=5
+x=6
 print ( "a",x,"b", sep='')
