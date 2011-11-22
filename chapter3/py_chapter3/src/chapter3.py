@@ -8,3 +8,7 @@ Created on Nov 22, 2011
 dairy_section = ["milk","cream","cheese","butter"]
 
 print( "%s %s"%(dairy_section[0],dairy_section[-1]))
+
+milk_expiration = (11,31,2011)
+
+
