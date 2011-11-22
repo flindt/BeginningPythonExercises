@@ -26,5 +26,8 @@ print( " This is %i oz of %s milk. It will expire on : %i / %i / %i"%( milk_cart
                                                                        milk_carton["expiration_date"][2]
                                                                        ))
 
+# ex 3.7
+print( " 6 cartons of milk will set you back : %i gold coins"%(milk_carton["cost"]*6))
+
 
 
