@@ -45,7 +45,14 @@ for product in dairy_section:
 cheese_indexes.sort(reverse=True)
 print( cheese_indexes )
 
+new_cheese_list = []
 for index in cheese_indexes:
-    dairy_section.pop(index)
+    new_cheese_list.append(dairy_section.pop(index))
     
 print( dairy_section )
+
+# ex 3.9
+print ( len(new_cheese_list) )
+
+# ex 3.10
+print( new_cheese_list[0][:6])
