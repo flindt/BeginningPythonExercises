@@ -33,6 +33,7 @@ print( " 6 cartons of milk will set you back : %i gold coins"%(milk_carton["cost
 cheese_list = ["cheese1", "cheese2"]
 dairy_section.extend(cheese_list)
 print( dairy_section )
+
 index = 0
 cheese_indexes=[]
 for product in dairy_section:
@@ -40,5 +41,11 @@ for product in dairy_section:
         print( "cheese found at index %i : %s"%(index,product))
         cheese_indexes.append(index)
     index = index + 1
-dairy_section.pop()
 
+cheese_indexes.sort(reverse=True)
+print( cheese_indexes )
+
+for index in cheese_indexes:
+    dairy_section.pop(index)
+    
+print( dairy_section )
