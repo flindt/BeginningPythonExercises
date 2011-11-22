@@ -5,6 +5,7 @@
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 3.0</pydev_property>
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
-<path>/py_chapter1/src</path>
+<path>/py_chapter6</path>
+<path>/py_chapter6/src</path>
 </pydev_pathproperty>
 </pydev_project>
