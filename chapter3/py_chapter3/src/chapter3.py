@@ -29,5 +29,16 @@ print( " This is %i oz of %s milk. It will expire on : %i / %i / %i"%( milk_cart
 # ex 3.7
 print( " 6 cartons of milk will set you back : %i gold coins"%(milk_carton["cost"]*6))
 
-
+# ex 3.8
+cheese_list = ["cheese1", "cheese2"]
+dairy_section.extend(cheese_list)
+print( dairy_section )
+index = 0
+cheese_indexes=[]
+for product in dairy_section:
+    if "cheese" in product:
+        print( "cheese found at index %i : %s"%(index,product))
+        cheese_indexes.append(index)
+    index = index + 1
+dairy_section.pop()
 
