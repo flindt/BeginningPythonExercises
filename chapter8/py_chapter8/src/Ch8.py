@@ -69,7 +69,7 @@ def rotate(path, version=0):
     old_path = make_version_path(path, version)
     if not os.path.exists(old_path):
         # It doesn't exist, so complain.
-        raise IOError("'%s' doesn't exist" % path)
+        raise IOError("'%s' doesn't exist" % old_path)
     # Construct the new version name for this file.
     new_path = make_version_path(path, version + 1)
     # Is there already a version with this name?
