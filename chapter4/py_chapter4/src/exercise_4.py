@@ -14,6 +14,8 @@ def printTrueFalse( X ):
         
 printTrueFalse(0)
 
+print( "----------------- ex 4.1 done -------------------------------------------------------------------------")
+
 # ex 4.3
 lookFor = "milk"
 lookIn = ["butter","milk", "cheese"]
@@ -25,7 +27,7 @@ elif lookFor == lookIn[1]:
 else:
     print("did not find it")
 
-
+print( "----------------- ex 4.3 done -------------------------------------------------------------------------")
 
 #ex 4.4
 fridge = { "Milk":"Thise minimælk", "Cheese":"Emmentaler", "Butter":"Unsalted butter"}
@@ -39,3 +41,5 @@ for foodKey in fridge:
         break
 else:
     print("it was not there")
+    
+print( "------------------ ex 4.4 done -------------------------------------------------------------------------")
