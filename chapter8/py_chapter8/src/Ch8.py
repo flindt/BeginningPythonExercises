@@ -3,7 +3,7 @@ def print_line_lengths():
 	a=open("test.txt","r")
 	text=a.readlines()
 	for line in text:
-    print(len(line))
+		print(len(line))
 
 
 #Splitting a path completely into directory names using a recursive function
@@ -63,7 +63,7 @@ def make_version_path(path, version):
         return path + "." + str(version)
 
 def rotate(path, version=0):
-    # Construct the name of the version we’re rotating.
+    # Construct the name of the version weï¿½re rotating.
     old_path = make_version_path(path, version)
     if not os.path.exists(old_path):
         # It doesn't exist, so complain.
