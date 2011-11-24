@@ -12,4 +12,4 @@ Ch8.print_dir(".")
 Ch8.print_line_lengths()
 print(Ch8.split_fully("/home/user/workspace"))
 Ch8.print_tree("../../")
-
+Ch8.print_dir_info("../../")

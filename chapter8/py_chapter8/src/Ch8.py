@@ -1,3 +1,5 @@
+import time
+
 
 def print_line_lengths():
 	a=open("test.txt","r")
