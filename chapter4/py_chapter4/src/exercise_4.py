@@ -14,6 +14,19 @@ def printTrueFalse( X ):
         
 printTrueFalse(0)
 
+# ex 4.3
+lookFor = "milk"
+lookIn = ["butter","milk", "cheese"]
+
+if lookFor == lookIn[0]:
+    print("found it")
+elif lookFor == lookIn[1]:
+    print("found it ...")
+else:
+    print("did not find it")
+
+
+
 #ex 4.4
 fridge = { "Milk":"Thise minimælk", "Cheese":"Emmentaler", "Butter":"Unsalted butter"}
 
