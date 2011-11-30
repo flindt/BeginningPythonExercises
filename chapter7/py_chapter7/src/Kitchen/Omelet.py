@@ -15,7 +15,7 @@ class Omelet:
         """
         self.set_kind(kind)
         return
-def __ingredients__(self):
+    def __ingredients__(self):
         """Internal method to be called on by a fridge or other objects
         that need to act on ingredients.
         """
