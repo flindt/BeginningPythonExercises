@@ -78,6 +78,13 @@ else:
     print("not found")
 
 
+# ex 4.6
+
+try:
+    wrongKey = fridge["Beer"]
+except KeyError:
+    print( "We are out of beer")
+
 
 
 
