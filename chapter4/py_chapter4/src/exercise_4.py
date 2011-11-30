@@ -73,6 +73,7 @@ print( fridge_list )
 while fridge_list:
     if fridge_list.pop()==food_sought :
         print( "found it again ")
+        break
 else:
     print("not found")
 
