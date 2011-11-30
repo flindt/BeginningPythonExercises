@@ -5,16 +5,30 @@ Created on Nov 17, 2011
 '''
 
 
-# ex 4.1 and 4.2 uses this function   
+# ex 4.1 and  
 def printTrueFalse( X ):
     if X:
-        print("%i is true"%X)
+        print("%s is true"%str(X))
     else:
-        print("%i is false"%X)
+        print("%s is false"%str(X))
         
 printTrueFalse(0)
+printTrueFalse(1)
+printTrueFalse(2)
+printTrueFalse(3)
+printTrueFalse("abc")
+
+printTrueFalse("")
+
 
 print( "----------------- ex 4.1 done -------------------------------------------------------------------------")
+
+# ex 4.2
+def inRange(X):
+    if X in range(3,9):
+        print( " %s is in the range"%str(X))
+
+inRange(5)
 
 # ex 4.3
 lookFor = "milk"
@@ -26,6 +40,12 @@ elif lookFor == lookIn[1]:
     print("found it ...")
 else:
     print("did not find it")
+    
+if lookFor in lookIn:
+    print(" its there ")
+else:
+    print("its not there")
+print(lookIn.index(lookFor) )
 
 print( "----------------- ex 4.3 done -------------------------------------------------------------------------")
 
@@ -43,3 +63,36 @@ else:
     print("it was not there")
     
 print( "------------------ ex 4.4 done -------------------------------------------------------------------------")
+
+# ex 4.5
+fridge_list = []
+for foodKey in fridge:
+    fridge_list.append(foodKey)
+print( fridge_list )    
+
+while fridge_list:
+    if fridge_list.pop()==food_sought :
+        print( "found it again ")
+else:
+    print("not found")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
