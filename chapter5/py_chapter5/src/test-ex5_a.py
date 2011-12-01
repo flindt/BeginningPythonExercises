@@ -21,6 +21,10 @@ class Test(unittest.TestCase):
     def testEx5_1_wrong_type(self):
         self.assertRaises(TypeError, ex_5.do_plus, (None, 2))
         pass
+    
+    def testEx5_1_wrong_type_2(self):
+        self.assertRaises(TypeError, ex_5.do_plus_ex, (None, 2))
+        pass
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testEx5_1_correct']

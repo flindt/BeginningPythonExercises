@@ -81,16 +81,21 @@ else:
 # ex 4.6
 
 try:
+    
     wrongKey = fridge["Beer"]
+    
 except KeyError:
     print( "We are out of beer")
+
+
+    
 
 try:
     goodKey = fridge["Milk"]
 except KeyError:
     print( "We are out of Milk")
     
-wrongKey = fridge["Beer"]
+
 
 
 
