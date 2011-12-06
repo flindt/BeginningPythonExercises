@@ -17,3 +17,18 @@ def createAFileWithAFewLines():
     myFile.close()
     
 createAFileWithAFewLines()
+
+
+def simpleYield():
+    yield 0
+    yield 7
+    yield 0
+    yield 8
+    yield 0
+    for t in range(0, 50, 5):
+        yield t
+    
+    
+for x in simpleYield():
+    print( x )
+    
