@@ -6,7 +6,6 @@ In this file, I will be testing things before writing the actual functions
 @author: pfl
 '''
 
-import os
 
 def createAFileWithAFewLines():
     myFile = open("aTestFile.dat","w")
