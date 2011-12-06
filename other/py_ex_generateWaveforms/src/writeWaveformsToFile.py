@@ -4,9 +4,14 @@ Created on Dec 6, 2011
 @author: pfl
 '''
 
+import math
 
 def Zero(t):
     return 0
+
+def Sinus(t):
+    sinFreq = 1
+    return math.sin( 2 * math.pi * t / sinFreq)
 
 def writeFunctionToFile(timeStart, timeEnd, frequency, function):
     outputFile = open("output.dat","w")
@@ -23,4 +28,4 @@ def writeFunctionToFile(timeStart, timeEnd, frequency, function):
 
 
 if __name__ == '__main__':
-    writeFunctionToFile(0, 10, 8 ,Zero)
+    writeFunctionToFile(0, 10, 8 ,Sinus)
