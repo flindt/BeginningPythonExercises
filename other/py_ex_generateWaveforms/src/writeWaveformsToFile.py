@@ -25,7 +25,7 @@ def writeFunctionToFile(filename, timeStart, timeEnd, frequency, function):
     t = timeStart
     timeStep = 1 / frequency
     while t < timeEnd:
-        outputFile.write("%f \t%f\n"%(t,function(t)))
+        outputFile.write("%f \t%f\n"%(t,function(t) ))
         t = t + timeStep
         
     outputFile.close()
