@@ -20,8 +20,6 @@ http://richizo.wordpress.com/2009/01/25/calling-c-functions-inside-python/
 
 
 import ctypes
-#ctypes.cdll.LoadLibrary("/home/pfl/git/beginning_C/other/find_primes/Debug/lib_primes.so")
-#libc = ctypes.CDLL("/home/pfl/git/beginning_C/other/find_primes/Debug/lib_primes.so")
 ctypes.cdll.LoadLibrary("../c_src/lib_primes.so")
 libc = ctypes.CDLL("../c_src/lib_primes.so")
 
