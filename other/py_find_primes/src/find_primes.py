@@ -31,4 +31,4 @@ def optimised_1(nMax):
             print("%i"%i)
     return
 
-optimised_1(1000)
+optimised_1(100000)
