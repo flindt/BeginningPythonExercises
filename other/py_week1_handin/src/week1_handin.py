@@ -56,7 +56,7 @@ def signal(t, signals):
     return total_signal
 
 
-def write_to_file(output_filename="output.dat", signals = (ZERO, SINUS)):
+def write_to_file(output_filename="output.dat", signals = (ZERO, )):
     '''
     open the output file, generates the time and signals by calling the respective functions
     the parameter outputfilename allows the caller to set the output filename
@@ -71,6 +71,10 @@ def write_to_file(output_filename="output.dat", signals = (ZERO, SINUS)):
     file_handle.close()
     
     
-write_to_file()
+# notide the comma ',' after the signal name. This is to make python understand that we need a tuple with just one element.
+# (ZERO) will be seen as an constant in a parentheses -> ZERO
+# (ZERO,) -> (ZERO)        that is a tuple
+write_to_file("output_zero.dat", (ZERO,))
+write_to_file("output_sinus.dat", (SINUS,))
 
 
