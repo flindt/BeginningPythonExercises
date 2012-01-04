@@ -5,6 +5,7 @@ Created on Jan 4, 2012
 '''
 
 import random
+import math
 
 signal_types = (ZERO, NOISE, SINUS) = (0,1,2)
 
@@ -38,6 +39,10 @@ def noise(t):
     # random gives a number from 0 to one, here a number from -1 to 1 is needed
     return random.random() * 2 - 1
 
+def sinus(t, freq = 50):
+    return math.sin( 2*math.pi* t * freq)
+    
+
 def signal(t, signals):
     total_signal = 0
     for this_signal in signals:
@@ -45,11 +50,13 @@ def signal(t, signals):
             total_signal = total_signal + zero(t)
         if this_signal == NOISE:
             total_signal = total_signal + noise(t)
-            
+        if this_signal == SINUS:
+            total_signal = total_signal + sinus(t)
+               
     return total_signal
 
 
-def write_to_file(output_filename="output.dat", signals = (ZERO, NOISE)):
+def write_to_file(output_filename="output.dat", signals = (ZERO, SINUS)):
     '''
     open the output file, generates the time and signals by calling the respective functions
     the parameter outputfilename allows the caller to set the output filename
