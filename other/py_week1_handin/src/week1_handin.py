@@ -22,9 +22,14 @@ def tick():
     
     # using "yield" a function can return a value without losing the state it is in
     # next time the function is called it will resume (start again) right after the "yield"
-    yield 0.0
-    yield 0.001
-    yield 0.002
+#    yield 0.0
+#    yield 0.001
+#    yield 0.002
+    t_now = t_start
+    while t_now < t_end:
+        t_now = t_now + t_step
+        yield t_now
+    
 
 def zero(t):
     return 0.0
@@ -54,9 +59,7 @@ def write_to_file(output_filename="output.dat", signals = (ZERO, NOISE)):
     file_handle.write("time / ms \toutput / V\n")
     
     for t in tick():
-        print("%f \t%f"%(t, signal(t, signals) ))
         file_handle.write("%f \t%f\n"%(t, signal(t, signals) ))
-    
     
     file_handle.close()
     
