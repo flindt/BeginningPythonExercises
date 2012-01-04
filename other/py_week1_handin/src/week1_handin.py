@@ -71,8 +71,6 @@ def write_to_file(output_filename="output.dat", signals = (ZERO, SINUS)):
     file_handle.close()
     
     
-    
-    
 write_to_file()
 
 
