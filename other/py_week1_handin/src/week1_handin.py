@@ -26,6 +26,13 @@ def signal():
 
 
 def write_to_file():
-    pass
+    
+    file_handle = open("output.dat",'w')
+    file_handle.write("time / ms \t output / V")
+    
+    file_handle.close()
+    
+    
+write_to_file()
 
 
