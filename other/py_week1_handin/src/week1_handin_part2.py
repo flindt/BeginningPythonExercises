@@ -34,5 +34,6 @@ def ex_2_2(input_file_name = "output.dat"):
             min = this_value[1]
     return (min,max)
 
+
 print (ex_2_1())
-print (ex_2_2())
+print (ex_2_2("output_sinus.dat"))
