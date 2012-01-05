@@ -21,4 +21,8 @@ def read_from_file( input_file_name = "output.dat"):
     file_handle.close()
     return input_signal
 
-print (read_from_file())
+def ex_2_1(input_file_name = "output.dat"):
+    return len( read_from_file(input_file_name))
+
+
+print (ex_2_1())
