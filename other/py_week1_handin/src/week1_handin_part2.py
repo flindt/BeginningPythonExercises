@@ -24,5 +24,15 @@ def read_from_file( input_file_name = "output.dat"):
 def ex_2_1(input_file_name = "output.dat"):
     return len( read_from_file(input_file_name))
 
+def ex_2_2(input_file_name = "output.dat"):
+    max = 0.0
+    min = 9e9
+    for this_value in read_from_file(input_file_name):
+        if max < this_value[1]:
+            max = this_value[1]
+        if min > this_value[1]:
+            min = this_value[1]
+    return (min,max)
 
 print (ex_2_1())
+print (ex_2_2())
