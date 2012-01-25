@@ -21,16 +21,37 @@ class TurnstileStatemachine(object):
         
         
     def input(self, event):
+        NewState = self._state
         
+        # first check the state 
+        if self._state == LOCKED:
+            #then check the event
+            if event == PAYED:
+                NewState = UNLOCKED
+            
+        # if the state hase changed OnExit and OnEnter must be called
+        if self._state != NewState:
+            self._OnExit()
+            self._state = NewState
+            self._OnEnter()
+        
+        # Do() allways gets called
         self._Do()
         pass
     
     
     def _OnEnter(self):
-        pass
+        if self._state==LOCKED:
+            pass
+        elif self._state==UNLOCKED:
+            print(" Opening door")
+
     
     def _OnExit(self):
-        pass
+        if self._state==LOCKED:
+            pass
+        elif self._state==UNLOCKED:
+            pass
     
     def _Do(self):
         if self._state==LOCKED:
