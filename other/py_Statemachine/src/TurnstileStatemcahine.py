@@ -39,12 +39,13 @@ class TurnstileStatemachine(object):
             if event == PAYED:
                 pass
             if event == PERSONPASSED:
+                NewState = LOCKED
                 pass
             if event == TICK:
                 pass            
             
             
-        # if the state hase changed OnExit and OnEnter must be called
+        # if the state has changed OnExit and OnEnter must be called
         if self._state != NewState:
             self._OnExit()
             self._state = NewState
@@ -53,18 +54,19 @@ class TurnstileStatemachine(object):
         # Do() allways gets called
         self._Do()
     
-    
+    # _OnEnter is where things that allways have to be done when entering a state is done
     def _OnEnter(self):
         if self._state==LOCKED:
             pass
         elif self._state==UNLOCKED:
             print(" Opening door")
 
-    
+    # _OnExit is where things that allways have to be done when exiting a state is done
     def _OnExit(self):
         if self._state==LOCKED:
             pass
         elif self._state==UNLOCKED:
+            print(" closing door")
             pass
     
     def _Do(self):
