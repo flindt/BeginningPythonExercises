@@ -28,6 +28,21 @@ class TurnstileStatemachine(object):
             #then check the event
             if event == PAYED:
                 NewState = UNLOCKED
+            if event == PERSONPASSED:
+                pass
+            if event == TICK:
+                pass
+            
+         # first check the state 
+        if self._state == UNLOCKED:
+            #then check the event
+            if event == PAYED:
+                pass
+            if event == PERSONPASSED:
+                pass
+            if event == TICK:
+                pass            
+            
             
         # if the state hase changed OnExit and OnEnter must be called
         if self._state != NewState:
@@ -37,7 +52,6 @@ class TurnstileStatemachine(object):
         
         # Do() allways gets called
         self._Do()
-        pass
     
     
     def _OnEnter(self):
