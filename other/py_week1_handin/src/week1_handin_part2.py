@@ -4,8 +4,6 @@ Created on Jan 4, 2012
 @author: pfl
 '''
 
-
-
 def read_from_file( input_file_name = "output.dat"):
     input_signal = []
     
@@ -16,7 +14,6 @@ def read_from_file( input_file_name = "output.dat"):
             input_signal.append( (float(this_line.split()[0]), float(this_line.split()[1])) )
         except (ValueError,IndexError):
             pass
-        
     
     file_handle.close()
     return input_signal
@@ -34,6 +31,18 @@ def ex_2_2(input_file_name = "output.dat"):
             min = this_value[1]
     return (min,max)
 
+def ex_2_3_simple(input_file_name = "output.dat"):
+    input_signal = read_from_file(input_file_name)
+    
+    
+    while len(input_signal):
+        old_value = input_signal.pop(0)
+        while new_value = input_signal.pop(0):
+            yield 1
+    
+    return 0
+    
 
 print (ex_2_1())
 print (ex_2_2("output_sinus.dat"))
+print (ex_2_3_simple("output_sinus.dat"))
