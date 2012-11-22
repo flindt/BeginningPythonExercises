@@ -1,4 +1,5 @@
 
+
 def add(a, b):
     if len(a) > len(b): # make sure la is the longest
         la = a
@@ -6,7 +7,7 @@ def add(a, b):
     else:
         la = b
         lb = a
-        
+  
     for index in range( len(la) ):
         lb = "0" +lb
     
