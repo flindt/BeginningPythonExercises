@@ -22,14 +22,14 @@ def ex_2_1(input_file_name = "output.dat"):
     return len( read_from_file(input_file_name))
 
 def ex_2_2(input_file_name = "output.dat"):
-    max = 0.0
-    min = 9e9
+    maxVal = 0.0
+    minVal = 9e9
     for this_value in read_from_file(input_file_name):
-        if max < this_value[1]:
-            max = this_value[1]
-        if min > this_value[1]:
-            min = this_value[1]
-    return (min,max)
+        if maxVal < this_value[1]:
+            maxVal = this_value[1]
+        if minVal > this_value[1]:
+            minVal = this_value[1]
+    return (minVal,maxVal)
 
 def ex_2_3_simple(input_file_name = "output.dat"):
     input_signal = read_from_file(input_file_name)
@@ -37,6 +37,7 @@ def ex_2_3_simple(input_file_name = "output.dat"):
     
     while len(input_signal):
         old_value = input_signal.pop(0)
+        new_value = 0
         while new_value = input_signal.pop(0):
             yield 1
     
