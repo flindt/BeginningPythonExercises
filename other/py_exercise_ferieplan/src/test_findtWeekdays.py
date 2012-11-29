@@ -13,6 +13,10 @@ testOutputA = ["Kr. Himmelfartsferie", "torsdag 9. maj 2013", "søndag 12. maj 2
 testInputB = "torsdag 9. maj 2013 - søndag 12. maj 2013"
 testOutputB = ["", "torsdag 9. maj 2013", "søndag 12. maj 2013"]
 
+testInputC = "ferie"
+testOutputC = ["ferie"]
+
+
 
 class Test(unittest.TestCase):
 
@@ -23,6 +27,10 @@ class Test(unittest.TestCase):
     
     def test_findweekDaysinLineB(self):
         self.assertEqual(testOutputB, readHolidayPlan.splitAtDates( testInputB ), "splitAtDates() failed")
+        pass
+    
+    def test_findweekDaysinLineNoDates(self):
+        self.assertEqual(testOutputC, readHolidayPlan.splitAtDates( testInputC ), "splitAtDates() failed")
         pass
 
 

@@ -49,6 +49,7 @@ def getHolidaysFromTxt( fileName ):
     
 def splitAtDates(inputString):
     weekdays = ("torsdag", "søndag")
+    result = []
     
     maxIndex = -1
     
@@ -57,9 +58,10 @@ def splitAtDates(inputString):
         if findIndex > maxIndex:
             maxIndex = findIndex
     
-    lastDate = inputString[maxIndex:].replace('-','').strip()
-            
-    inputString = inputString[:maxIndex]
+    if maxIndex != -1:
+        lastDate = inputString[maxIndex:].replace('-','').strip()    
+        inputString = inputString[:maxIndex]
+        result.insert(0, lastDate)
     
     maxIndex = -1
     
@@ -68,8 +70,10 @@ def splitAtDates(inputString):
         if findIndex > maxIndex:
             maxIndex = findIndex
             
-    firstDate = inputString[maxIndex:].replace('-','').strip()
-            
-    inputString = inputString[:maxIndex].strip()
+    if maxIndex != -1:
+        firstDate = inputString[maxIndex:].replace('-','').strip()    
+        inputString = inputString[:maxIndex]
+        result.insert(0, firstDate)
 
-    return [inputString, firstDate, lastDate]
+    result.insert(0, inputString.strip())
+    return result
