@@ -57,7 +57,7 @@ def splitAtDates(inputString):
         if findIndex > maxIndex:
             maxIndex = findIndex
     
-    lastDate = inputString[maxIndex:]
+    lastDate = inputString[maxIndex:].replace('-','').strip()
             
     inputString = inputString[:maxIndex]
     
@@ -68,8 +68,8 @@ def splitAtDates(inputString):
         if findIndex > maxIndex:
             maxIndex = findIndex
             
-    firstDate = inputString[maxIndex:]
+    firstDate = inputString[maxIndex:].replace('-','').strip()
             
-    inputString = inputString[:maxIndex]
+    inputString = inputString[:maxIndex].strip()
 
     return [inputString, firstDate, lastDate]

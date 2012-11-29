@@ -43,6 +43,10 @@ class Test(unittest.TestCase):
     def test_ReadHolidaysFromTxt_simpleInput2(self):
         self.assertEqual(testfile2Output, readHolidayPlan.getHolidaysFromTxt("testfile2.txt"), \
                          "ReadHolidaysFromTxt() did not return the correct list from testfile2.txt" )
+        
+    def test_ReadHolidaysFromTxt_simpleInput3(self):
+        self.assertEqual(testfile3Output, readHolidayPlan.getHolidaysFromTxt("testfile3.txt"), \
+                         "ReadHolidaysFromTxt() did not return the correct list from testfile2.txt" )
      
 
 if __name__ == "__main__":
