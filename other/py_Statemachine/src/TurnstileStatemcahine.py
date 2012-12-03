@@ -3,7 +3,7 @@ Created on Jan 25, 2012
 
 @author: pfl
 '''
- #  Define states 
+#  Define states 
 ( LOCKED, UNLOCKED ) = (0, 1)
 # Define events
 ( PAYED, PERSONPASSED, TICK) = (0,1,2)
@@ -20,7 +20,7 @@ class TurnstileStatemachine(object):
         self._state = LOCKED
         
         
-    def input(self, event):
+    def inputEvent(self, event):
         NewState = self._state
         
         # first check the state 
@@ -33,7 +33,7 @@ class TurnstileStatemachine(object):
             if event == TICK:
                 pass
             
-         # first check the state 
+        # first check the state 
         if self._state == UNLOCKED:
             #then check the event
             if event == PAYED:
@@ -80,6 +80,6 @@ class TurnstileStatemachine(object):
 if __name__ == "__main__":
     myTurnstile = TurnstileStatemachine()
     
-    myTurnstile.input(PAYED)
-    myTurnstile.input(PERSONPASSED)
+    myTurnstile.inputEvent(PAYED)
+    myTurnstile.inputEvent(PERSONPASSED)
     
