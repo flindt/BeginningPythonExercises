@@ -14,9 +14,11 @@ def result():
     
     
     
-    
+# Create a fraom to hold all the GUI elements
 win = tk.Frame()    
     
+# StringVar is the connection from the GUI to the code in this file
+# Update them with .set in the callback functions  
 resultVar = tk.StringVar()
 resultVar.set("trying...")
 
