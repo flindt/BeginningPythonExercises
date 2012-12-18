@@ -6,6 +6,7 @@ Created on Dec 13, 2012
 import unittest
 
 import VendingMachine as VM
+from VendingMachine import CANCELBUTTON
 
 class Test(unittest.TestCase):
 
@@ -33,6 +34,15 @@ class Test(unittest.TestCase):
         
         myVM.inputEvent( VM.PRODUCTSELECT, VM.COLA)
         self.assertEqual(VM.SALE, myVM.getState(), "VM did not get into correct state")
+        
+    def test_VM_cancelButton(self):
+        myVM = VM.VendingSM()
+        
+        myVM.inputEvent( VM.COIN_1 )
+        self.assertEqual(1, myVM.getCredit(), "Amount of credit is wrong")
+        
+        myVM.inputEvent( CANCELBUTTON )
+        self.assertEqual(0, myVM.getCredit(), "Amount of credit is wrong")
 
 
 if __name__ == "__main__":
