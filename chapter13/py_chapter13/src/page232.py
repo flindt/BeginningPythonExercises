@@ -9,7 +9,10 @@ import tkinter as tk
 def result():
     print( " this sum of 2+2 is : ", 2+2)
     
-    
+
+mainWindow = tk.Tk()
+mainWindow.title("testing...")
+
 win = tk.Frame()
 win.pack()
 label1 = tk.Label( win, text = "click Add to get the sum.").pack(side=tk.TOP)
