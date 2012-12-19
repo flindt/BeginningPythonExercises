@@ -28,8 +28,17 @@ class VendingSM(object):
             print("You have put in %i DKK"%self._credit)
     
     
+    def _CashBack(self):
+        print("Cash back : %i"%self._credit)
+    
+    
     def inputEvent(self, event, options=None):
         NewState = self._state
+        
+        if event == CANCELBUTTON:
+            self._state = IDLE
+            self._CashBack()
+            self._credit = 0
         
         if self._state == IDLE:
             if event == COIN_1:
